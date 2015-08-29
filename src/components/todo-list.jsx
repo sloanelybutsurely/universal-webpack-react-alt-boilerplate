@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
-import connect from '../utils/connect'
+import connect from 'utils/connect'
 
-import TodoStore from '../stores/todo-store'
+import TodoStore from 'stores/todo-store'
 
 
 @connect

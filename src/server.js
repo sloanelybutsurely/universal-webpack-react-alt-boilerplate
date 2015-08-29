@@ -4,8 +4,8 @@ import React from 'react'
 import Router from 'react-router'
 import {Resolver} from 'react-resolver'
 
-import routes from './src/routes'
-import alt from './src/alt-instance'
+import routes from 'routes'
+import alt from 'alt-instance'
 
 const app = express()
 

@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "build-client": "webpack --config client.config.js",
+    "build-server": "webpack --config server.config.js",
     "dev": "webpack --watch & nodemon --exec npm run server -- server.js",
     "server": "babel-node --stage 0 server.js"
   },
@@ -32,7 +34,8 @@
     "express": "^4.13.3",
     "react": "^0.13.3",
     "react-resolver": "^2.0.4",
-    "react-router": "^0.13.3"
+    "react-router": "^0.13.3",
+    "source-map-support": "^0.3.2"
   },
   "devDependencies": {
     "babel-core": "^5.8.23",

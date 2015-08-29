@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route, NotFoundRoute} from 'react-router'
 
-import App from './components/app'
+import App from 'components/app'
 
 const NotFound = React.createClass({
   render() {

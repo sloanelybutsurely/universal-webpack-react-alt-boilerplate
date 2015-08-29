@@ -1,7 +1,7 @@
-import alt from '../alt-instance'
-import fetch from '../utils/fetch'
-import TodoActions from '../actions/todo-actions'
-import {fetchTodos} from '../sources/todo-source'
+import alt from 'alt-instance'
+import fetch from 'utils/fetch'
+import TodoActions from 'actions/todo-actions'
+import {fetchTodos} from 'sources/todo-source'
 
 class TodoStore {
   constructor() {
