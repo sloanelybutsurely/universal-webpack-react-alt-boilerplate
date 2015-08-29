@@ -1,5 +1,5 @@
-import TodoActions from '../actions/todo-actions'
-import api from '../utils/api-dummy'
+import TodoActions from 'actions/todo-actions'
+import api from 'utils/api-dummy'
 
 const TodoSource = {
   fetchTodos: {

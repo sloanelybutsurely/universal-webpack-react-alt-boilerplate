@@ -1,7 +1,7 @@
 import React from 'react'
 
-import TodoInput from './todo-input'
-import TodoList from './todo-list'
+import TodoInput from 'components/todo-input'
+import TodoList from 'components/todo-list'
 
 const App = React.createClass({
   getInitialState() {
