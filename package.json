@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate/issues"
   },
-  "homepage": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate#readme"
+  "homepage": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
