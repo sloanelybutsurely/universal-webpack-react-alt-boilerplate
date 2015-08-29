@@ -14,7 +14,6 @@ const App = React.createClass({
         <pre onClick={() => this.setState({clicks: this.state.clicks + 1})}>
           Clicks: {this.state.clicks}
         </pre>
-        <Link to="test">Go to another page</Link>
       </div>
     )
   }
