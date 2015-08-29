@@ -2,13 +2,16 @@
   "name": "universal-webpack-react-alt-boilerplate",
   "version": "0.0.1",
   "description": "A starter template for server side rendering with React and Alt",
-  "main": "index.js",
+  "main": "dist/server-build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && node dist/server-build.js",
     "build-client": "webpack --config client.config.js",
     "build-server": "webpack --config server.config.js",
-    "dev": "webpack --watch & nodemon --exec npm run server -- server.js",
-    "server": "babel-node --stage 0 server.js"
+    "build": "npm run build-server & npm run build-client",
+    "dev-client": "webpack --watch --config client.config.js",
+    "dev-server": "webpack --watch --config server.config.js",
+    "dev": "npm run dev-server & npm dev-client & nodemon dist/server-build.js"
   },
   "repository": {
     "type": "git",
