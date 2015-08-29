@@ -5,6 +5,10 @@
 </head>
 <body>
   <div id="app"><%- content %></div>
+  <script>
+    window.__alt_data = <%- JSON.stringify(__alt_data) %>
+    window.__REACT_RESOLVER_PAYLOAD__ = <%- JSON.stringify(__react_resolver_data) %>
+  </script>
   <script src="/public/bundle.js"></script>
 </body>
 </html>

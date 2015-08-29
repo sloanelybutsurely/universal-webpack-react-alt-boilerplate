@@ -1,5 +1,7 @@
 import React from 'react'
-import {Link} from 'react-router'
+
+import TodoInput from './todo-input'
+import TodoList from './todo-list'
 
 const App = React.createClass({
   getInitialState() {
@@ -11,9 +13,9 @@ const App = React.createClass({
   render() {
     return (
       <div>
-        <pre onClick={() => this.setState({clicks: this.state.clicks + 1})}>
-          Clicks: {this.state.clicks}
-        </pre>
+        <pre onClick={() => this.setState({clicks: this.state.clicks + 1})}>Clicks {this.state.clicks}</pre>
+        <TodoInput />
+        <TodoList />
       </div>
     )
   }
