@@ -16,7 +16,6 @@ app.use('/public', express.static('public'))
 app.use((req, res) => {
   // react-router handler
   Router.run(routes, req.url, (Handler, state) => {
-
     Resolver.resolve(() => <Handler {...state} />)
             .then(({Resolved, data}) => {
               // React renders the component
