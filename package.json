@@ -30,5 +30,11 @@
     "express": "^4.13.3",
     "react": "^0.13.3",
     "react-router": "^0.13.3"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-loader": "^5.3.2",
+    "webpack": "^1.12.0",
+    "webpack-dev-server": "^1.10.1"
   }
 }
