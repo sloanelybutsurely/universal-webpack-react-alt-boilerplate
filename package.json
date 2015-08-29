@@ -31,6 +31,7 @@
     "ejs": "^2.3.3",
     "express": "^4.13.3",
     "react": "^0.13.3",
+    "react-resolver": "^2.0.4",
     "react-router": "^0.13.3"
   },
   "devDependencies": {
