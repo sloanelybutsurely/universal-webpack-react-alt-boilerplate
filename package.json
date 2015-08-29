@@ -1,0 +1,27 @@
+{
+  "name": "universal-webpack-react-alt-boilerplate",
+  "version": "0.0.1",
+  "description": "A starter template for server side rendering with React and Alt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zperrault/universal-webpack-react-alt-boilerplate.git"
+  },
+  "keywords": [
+    "react",
+    "universal",
+    "isomorphic",
+    "alt",
+    "flux",
+    "boilerplate"
+  ],
+  "author": "Zach Perrault <zach.perrault@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate/issues"
+  },
+  "homepage": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate#readme"
+}
