@@ -1,19 +1,12 @@
 import React from 'react'
 import {Route, NotFoundRoute} from 'react-router'
 
-const App = React.createClass({
-  getInitialState() {
-    return {
-      clicks: 0
-    }
-  },
+import App from './components/app'
 
+
+const Test = React.createClass({
   render() {
-    return (
-      <pre onClick={() => this.setState({clicks: this.state.clicks + 1})}>
-        Clicks: {this.state.clicks}
-      </pre>
-    )
+    return <pre>Moar stuffs...</pre>
   }
 })
 
@@ -25,6 +18,7 @@ const NotFound = React.createClass({
 
 const routes = [
   <Route path="/" handler={App} />,
+  <Route name="test" handler={Test} />,
   <NotFoundRoute handler={NotFound} />,
 ]
 

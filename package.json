@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "babel-node server.js"
+    "dev": "webpack --watch & nodemon --exec npm run server -- server.js",
+    "server": "babel-node --stage 0 server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
   },
   "homepage": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate#readme",
   "dependencies": {
+    "alt": "^0.17.1",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
     "react": "^0.13.3",
@@ -34,6 +36,7 @@
   "devDependencies": {
     "babel-core": "^5.8.23",
     "babel-loader": "^5.3.2",
+    "nodemon": "^1.4.1",
     "webpack": "^1.12.0",
     "webpack-dev-server": "^1.10.1"
   }

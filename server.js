@@ -1,4 +1,5 @@
 import express from 'express'
+import {Link} from 'react-router'
 import React from 'react'
 import Router from 'react-router'
 
