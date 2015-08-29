@@ -1,2 +1,3 @@
 import Alt from 'alt'
-export default new Alt()
+import chromeDebug from 'alt/utils/chromeDebug'
+export default chromeDebug(new Alt())

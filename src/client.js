@@ -6,7 +6,10 @@ import {Resolver} from 'react-resolver'
 import routes from 'routes'
 import alt from 'alt-instance'
 
-if (window.__alt_data) alt.bootstrap(window.__alt_data)
+if (window.__ALT_BOOTSTRAP_PAYLOAD__) {
+  alt.bootstrap(window.__ALT_BOOTSTRAP_PAYLOAD__)
+  delete window['__ALT_BOOTSTRAP_PAYLOAD__']
+}
 
 Router.run(routes, HistoryLocation, (Root) => {
   Resolver.render(() => <Root />, document.getElementById('app'))
