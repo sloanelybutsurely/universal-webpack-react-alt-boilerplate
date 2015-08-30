@@ -1,19 +1,20 @@
 import TodoActions from 'actions/todo-actions'
-import api from 'utils/api-dummy'
+import axios from 'axios'
 
 const TodoSource = {
   fetchTodos: {
     local(state) {
-      return null
+      return state.todos
     },
 
     remote(state) {
-      return api.getTodos()
+      console.log('source...', state)
+      return axios.get('http://jsonplaceholder.typicode.com/todos')
     },
 
     success: TodoActions.todosLoaded,
     error: TodoActions.todoLoadFailed,
-  }
+  },
 }
 
 export default TodoSource

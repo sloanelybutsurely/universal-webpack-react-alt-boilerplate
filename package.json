@@ -11,7 +11,7 @@
     "build": "npm run build-server & npm run build-client",
     "dev-client": "webpack --watch --config client.config.js",
     "dev-server": "webpack --watch --config server.config.js",
-    "dev": "npm run dev-server & npm dev-client & nodemon dist/server-build.js"
+    "dev": "npm run dev-server & npm run dev-client & nodemon dist/server-build.js"
   },
   "repository": {
     "type": "git",
@@ -33,6 +33,7 @@
   "homepage": "https://github.com/zperrault/universal-webpack-react-alt-boilerplate#readme",
   "dependencies": {
     "alt": "^0.17.1",
+    "axios": "^0.5.4",
     "ejs": "^2.3.3",
     "express": "^4.13.3",
     "react": "^0.13.3",

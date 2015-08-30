@@ -1,6 +1,5 @@
 import React from 'react'
 
-import TodoInput from 'components/todo-input'
 import TodoList from 'components/todo-list'
 
 const App = React.createClass({
@@ -14,7 +13,6 @@ const App = React.createClass({
     return (
       <div>
         <pre onClick={() => this.setState({clicks: this.state.clicks + 1})}>Clicks {this.state.clicks}</pre>
-        <TodoInput />
         <TodoList />
       </div>
     )
