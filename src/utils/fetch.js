@@ -1,4 +1,4 @@
-export default function fetch(store, source) {
+export default function fetch(store, source, ...args) {
   const storeInst = store.getInstance ? store.getInstance() : store
   const state = storeInst.getState()
 
@@ -9,14 +9,14 @@ export default function fetch(store, source) {
     }
   })
 
-  const value = source.local && source.local(state)
+  const value = source.local && source.local(state, ...args)
   const shouldFetch = source.shouldFetch
     ? source.shouldFetch(state)
     : value == null
 
   if (shouldFetch) {
     if (source.begin) source.begin()
-    const result = source.remote(state)
+    const result = source.remote(state, ...args)
     result.then(source.success, source.failure).then(source.end)
     return result
   } else {
