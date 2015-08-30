@@ -51,3 +51,8 @@ views
 #### TODO
 
 - [ ] Merge duplicate webpack config options
+- [ ] Document fetch and connect
+- [ ] Document `npm run` scripts
+- [ ] rename project... 'universal-webpack-react-alt-boilerplate' is a mouthful
+- [ ] Create production builds
+- [ ] Yeoman generator?
