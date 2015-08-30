@@ -23,7 +23,7 @@ export default class TodoList extends Component {
 
   renderTodos() {
     if (!this.props.todos) return
-    return Object.keys(this.props.todos).map((id) => <pre key={id}>{this.props.todos[id].text}</pre>)
+    return this.props.todos.map((todo) => <pre key={todo.id}>{todo.text}</pre>)
   }
 
   render() {

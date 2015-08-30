@@ -1,3 +1,4 @@
+import React, {addons} from 'react/addons'
 import alt from 'alt-instance'
 import fetch from 'utils/fetch'
 import TodoActions from 'actions/todo-actions'
@@ -14,8 +15,8 @@ class TodoStore {
     })
   }
 
-  onTodosLoaded(todos) {
-    this.setState({todos})
+  onTodosLoaded({response: {data}}) {
+    this.setState({todos: data})
   }
 
   fetchTodos() {

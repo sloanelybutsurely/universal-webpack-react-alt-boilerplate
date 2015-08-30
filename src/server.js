@@ -1,5 +1,4 @@
 import express from 'express'
-import {Link} from 'react-router'
 import React from 'react'
 import Router from 'react-router'
 import {Resolver} from 'react-resolver'
@@ -35,6 +34,10 @@ app.use((req, res) => {
 
               // Very minimal logging
               console.log(`react server render: ${req.method} -- ${req.url}`)
+            })
+            .catch((error) => {
+              console.log('failed to resolve data...', error)
+              res.status(500).send(error)
             })
   })
 })

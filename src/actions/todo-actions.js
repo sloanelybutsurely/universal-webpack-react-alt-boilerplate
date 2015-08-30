@@ -4,6 +4,7 @@ class TodoActions {
   constructor() {
     this.generateActions(
       'todosLoaded',
+      'todoLoaded',
       'todoLoadFailed'
     )
   }
