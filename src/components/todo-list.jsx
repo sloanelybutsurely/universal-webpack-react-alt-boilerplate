@@ -11,7 +11,7 @@ export default class TodoList extends Component {
     this.renderTodos = this.renderTodos.bind(this)
   }
 
-  static resolveProps() {
+  static resolveProps(props, context) {
     return {
       todos: TodoStore.fetchTodos()
     }
@@ -23,7 +23,7 @@ export default class TodoList extends Component {
 
   renderTodos() {
     if (!this.props.todos) return
-    return this.props.todos.map((todo) => <pre key={todo.id}>{todo.text}</pre>)
+    return this.props.todos.map((todo) => <pre key={todo.id}>{todo.title}</pre>)
   }
 
   render() {

@@ -1,8 +1,8 @@
 import React, {addons} from 'react/addons'
+import axios from 'axios'
 import alt from 'alt-instance'
 import fetch from 'utils/fetch'
 import TodoActions from 'actions/todo-actions'
-import {fetchTodos} from 'sources/todo-source'
 
 class TodoStore {
   constructor() {
@@ -15,12 +15,24 @@ class TodoStore {
     })
   }
 
-  onTodosLoaded({response: {data}}) {
-    this.setState({todos: data})
+  onTodosLoaded(todos) {
+    this.setState({todos})
   }
 
   fetchTodos() {
-    return fetch(this, fetchTodos)
+    return fetch(this, {
+      local(state) {
+        return state.todos
+      },
+
+      remote(state) {
+        return axios.get('http://jsonplaceholder.typicode.com/todos')
+                    .then((resp) => resp.data)
+      },
+
+      success: TodoActions.todosLoaded,
+      failure: TodoActions.todoLoadFailed,
+    })
   }
 }
 
