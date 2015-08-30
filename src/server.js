@@ -15,6 +15,8 @@ app.use('/public', express.static('public'))
 app.use((req, res) => {
   // react-router handler
   Router.run(routes, req.url, (Handler, state) => {
+    const logLabel = `react server render: ${req.method} -- ${req.url}`
+    console.time(logLabel)
     Resolver.resolve(() => <Handler {...state} />)
             .then(({Resolved, data}) => {
               // React renders the component
@@ -22,7 +24,7 @@ app.use((req, res) => {
               const __alt_data = alt.flush()
 
 
-              // Make sure the right header is set when we hit <NotFoundRoute />
+              // Make sure the right status is set when we hit <NotFoundRoute />
               if (state.routes[0].isNotFound) res.status(404)
 
               // Use ejs template (./views/index.ejs)
@@ -33,17 +35,14 @@ app.use((req, res) => {
               })
 
               // Very minimal logging
-              console.log(`react server render: ${req.method} -- ${req.url}`)
+              console.timeEnd(logLabel)
             })
-            .catch((error) => {
-              console.log('failed to resolve data...', error)
-              res.status(500).send(error)
+            .catch((e) => {
+              console.error(e.stack)
+              res.status(500).send(e.stack)
+              console.timeEnd(logLabel)
             })
   })
-})
-
-app.get('/', (req, res) => {
-  res.send('hello, world')
 })
 
 const server = app.listen(process.env.PORT || 3000, () => {
