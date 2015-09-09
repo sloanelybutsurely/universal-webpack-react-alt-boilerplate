@@ -38,8 +38,9 @@ app.use((req, res) => {
               console.timeEnd(logLabel)
             })
             .catch((e) => {
-              console.error(e.stack)
-              res.status(500).send(e.stack)
+              const disp = e.stack ? e.stack : e
+              console.error(disp)
+              res.status(500).send(disp)
               console.timeEnd(logLabel)
             })
   })
