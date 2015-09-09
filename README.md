@@ -54,5 +54,5 @@ views
 - [ ] Document fetch and connect
 - [ ] Document `npm run` scripts
 - [ ] rename project... 'universal-webpack-react-alt-boilerplate' is a mouthful
-- [x] Create production builds
+- [x] ~~Create production builds~~
 - [ ] Yeoman generator?
