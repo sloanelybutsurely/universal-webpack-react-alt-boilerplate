@@ -1,4 +1,7 @@
 var path = require('path');
+var webpack = require('webpack');
+
+var PRODUCTION = process.env.NODE_ENV === 'production';
 
 module.exports = {
   entry: path.join(__dirname, 'src/client.js'),
@@ -21,5 +24,8 @@ module.exports = {
     root: path.resolve(__dirname, 'src'),
     extensions: ['', '.js', '.jsx']
   },
-  devtool: 'eval-source-map'
+  plugins: PRODUCTION ? [
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
+  ] : [],
+  devtool: 'source-map'
 };
