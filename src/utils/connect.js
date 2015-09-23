@@ -1,3 +1,4 @@
+// adapted from https://gist.github.com/goatslacker/5f84bf1793cbc7badda3
 import React from 'react'
 import { Resolver } from 'react-resolver'
 

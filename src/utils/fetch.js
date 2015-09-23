@@ -1,3 +1,4 @@
+// adapted from https://gist.github.com/goatslacker/b3ea014881aa5b03488d
 export default function fetch(store, source, ...args) {
   const storeInst = store.getInstance ? store.getInstance() : store
   const state = storeInst.getState()
